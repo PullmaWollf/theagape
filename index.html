@@ -12,6 +12,8 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="apple-touch-icon" href="/icons/icon-192.png">
 <title>Célula Ágape</title>
+<!-- Supabase SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -841,9 +843,6 @@ body{
 
 <div class="toast" id="toast"></div>
 
-<!-- Supabase JS SDK -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
-
 <script>
 /* ════════════════════════════════════════════════════════════════
    CONFIGURAÇÃO SUPABASE
@@ -881,8 +880,19 @@ let S = {
 
 /* ════ SUPABASE HELPERS ════ */
 async function dbLoad() {
+  console.log('Iniciando dbLoad...');
+  
+  // Timeout de segurança: se em 8 segundos não carregar, libera a tela
+  const timeout = setTimeout(() => {
+    console.warn('dbLoad timeout - liberando tela');
+    hideLoading();
+    renderAll();
+  }, 8000);
+
   if (!supabase) {
+    console.log('Supabase não configurado, usando modo local.');
     setDbStatus(false, 'local');
+    clearTimeout(timeout);
     hideLoading();
     renderAll();
     return;
@@ -915,12 +925,15 @@ async function dbLoad() {
 
     setDbStatus(true, 'online');
     setupRealtimeSubscriptions();
+    console.log('Supabase conectado com sucesso!');
   } catch(err) {
-    console.warn('Supabase load error:', err);
+    console.error('Erro detalhado do Supabase:', err);
     setDbStatus(false, 'erro');
+  } finally {
+    clearTimeout(timeout);
+    hideLoading();
+    renderAll();
   }
-  hideLoading();
-  renderAll();
 }
 
 function setDbStatus(online, label) {
