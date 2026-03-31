@@ -1,5 +1,5 @@
 // ─── Célula Ágape Service Worker ───
-const CACHE = 'agape-v1';
+const CACHE = 'agape-v2';
 const ASSETS = ['/', '/index.html', '/manifest.json'];
 
 // ── INSTALL: cache assets ──
@@ -20,16 +20,32 @@ self.addEventListener('activate', e => {
   self.clients.claim();
 });
 
-// ── FETCH: serve from cache, fallback network ──
+// ── FETCH: Network-first for HTML/Manifest, Cache-first for others ──
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
-  e.respondWith(
-    caches.match(e.request).then(cached => cached || fetch(e.request).then(res => {
-      const clone = res.clone();
-      caches.open(CACHE).then(c => c.put(e.request, clone));
-      return res;
-    }))
-  );
+  
+  const url = new URL(e.request.url);
+  const isDoc = url.pathname === '/' || url.pathname.endsWith('.html') || url.pathname.endsWith('manifest.json');
+
+  if (isDoc) {
+    // Network-first strategy for main files to ensure updates
+    e.respondWith(
+      fetch(e.request).then(res => {
+        const clone = res.clone();
+        caches.open(CACHE).then(c => c.put(e.request, clone));
+        return res;
+      }).catch(() => caches.match(e.request))
+    );
+  } else {
+    // Cache-first strategy for assets (icons, etc)
+    e.respondWith(
+      caches.match(e.request).then(cached => cached || fetch(e.request).then(res => {
+        const clone = res.clone();
+        caches.open(CACHE).then(c => c.put(e.request, clone));
+        return res;
+      }))
+    );
+  }
 });
 
 // ── PUSH: receive push from server (future Supabase integration) ──
