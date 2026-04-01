@@ -1,5 +1,5 @@
 // api/push.js — Envia push imediato (chamado pelo frontend ao postar Aviso)
-export const config = { runtime: 'nodejs18.x' };
+export const config = { runtime: 'nodejs' };
 
 const SUPA_URL  = process.env.SUPABASE_URL;
 const SUPA_KEY  = process.env.SUPABASE_SERVICE_KEY;
