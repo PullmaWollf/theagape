@@ -98,17 +98,14 @@ body{
 .adm-pip{background:var(--accent);color:#fff;font-size:0.62rem;font-weight:700;padding:2px 6px;border-radius:99px;letter-spacing:.05em}
 
 /* ── BOTTOM TAB BAR ── */
-  .tab-bar{
-    position:fixed;bottom:0;left:0;right:0;z-index:200;
-    height:calc(var(--bar-h) + var(--safe-b));
-    padding-bottom:var(--safe-b);
-    background:var(--surface);border-top:1px solid var(--border);
-    display:flex;align-items:stretch;
-    box-shadow:0 -4px 24px rgba(100,70,60,0.08);
-  }
-  @media(max-width:639px){
-    .tab-bar{display:flex}
-  }
+.tab-bar{
+  position:fixed;bottom:0;left:0;right:0;z-index:200;
+  height:calc(var(--bar-h) + var(--safe-b));
+  padding-bottom:var(--safe-b);
+  background:var(--surface);border-top:1px solid var(--border);
+  display:flex;align-items:stretch;
+  box-shadow:0 -4px 24px rgba(100,70,60,0.08);
+}
 .tab-btn{
   flex:1;border:none;background:none;cursor:pointer;
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
@@ -138,8 +135,7 @@ body{
 }
 .hero-bg{
   position:absolute;inset:0;
-  background-image:url('data:image/jpeg;base64,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
-139	(Content truncated due to size limit. Use line ranges to read remaining content)');
+  background-image:url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1000');
   background-size:cover;background-position:center;
 }
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top, var(--bg) 10%, rgba(245,237,228,0.4) 50%, rgba(245,237,228,0.1) 100%)}
@@ -167,44 +163,17 @@ body{
 .prox-banner{
   background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
   padding:16px;display:flex;align-items:center;gap:14px;margin-bottom:20px;
-  box-shadow:var(--sh);
-  flex-wrap: wrap;
+  box-shadow:var(--sh);flex-wrap: wrap;
 }
 .pb-icon{font-size:2.2rem;flex-shrink:0}
 .pb-label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:2px}
 .pb-name{font-weight:700;font-size:1rem;color:var(--stone-d)}
 .pb-date{font-size:0.8rem;color:var(--muted)}
-.pb-members{font-size:0.8rem;color:var(--stone);margin-top:4px}
 
 /* ── SECTION HEADER ── */
 .sec-hdr{margin-bottom:16px}
 .sec-hdr h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--stone-d)}
 .sec-hdr p{font-size:0.8rem;color:var(--muted);margin-top:2px}
-
-/* ── INSTALL BANNER ── */
-.install-banner{
-  background:linear-gradient(135deg,var(--stone-d),var(--stone));
-  color:var(--cream);border-radius:var(--r);
-  padding:14px 16px;margin-bottom:14px;
-  display:flex;align-items:center;gap:12px;
-  box-shadow:var(--sh-lg);animation:fadeUp .3s ease;
-}
-.install-banner .ib-icon{font-size:1.8rem;flex-shrink:0}
-.install-banner .ib-text{flex:1;min-width:0}
-.install-banner .ib-title{font-weight:700;font-size:0.9rem}
-.install-banner .ib-sub{font-size:0.76rem;opacity:.75;margin-top:2px}
-.install-banner .ib-btn{
-  height:34px;padding:0 14px;border-radius:99px;border:none;
-  background:var(--accent);color:#fff;
-  font-family:'DM Sans',sans-serif;font-size:0.8rem;font-weight:700;
-  cursor:pointer;flex-shrink:0;transition:opacity .15s;
-}
-.install-banner .ib-btn:active{opacity:.8}
-.install-banner .ib-close{
-  width:28px;height:28px;border-radius:50%;border:none;background:rgba(255,255,255,0.15);
-  color:var(--cream);cursor:pointer;display:flex;align-items:center;justify-content:center;
-  font-size:0.9rem;flex-shrink:0;
-}
 
 /* ── MURAL ── */
 .compose-card{
@@ -235,12 +204,6 @@ body{
 }
 .btn-publish:active{background:var(--stone);transform:scale(.96)}
 
-.login-nudge{
-  background:var(--surface);border-radius:var(--r);border:1px solid var(--border);
-  padding:20px;margin-bottom:14px;text-align:center;
-}
-.login-nudge p{font-size:0.875rem;color:var(--muted);margin-bottom:12px}
-
 .posts-list{display:flex;flex-direction:column;gap:12px}
 .post-card{
   background:var(--surface);border-radius:var(--r);border:1px solid var(--border);
@@ -263,24 +226,14 @@ body{
 .post-body.is-versiculo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--stone-d)}
 .post-actions{display:flex;justify-content:flex-end;margin-top:12px;padding-top:10px;border-top:1px solid var(--border)}
 .btn-del-post{background:none;border:none;color:var(--muted);font-size:0.75rem;cursor:pointer;font-weight:600}
-.btn-del-post:hover{color:var(--danger)}
 
 /* ── ESCALA ── */
-.notif-banner{
-  background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
-  padding:16px;display:flex;align-items:center;gap:14px;margin-bottom:20px;
-  box-shadow:var(--sh);
-}
-.nb-text{flex:1}
-.nb-title{font-weight:700;font-size:0.9rem;color:var(--stone-d)}
-.nb-sub{font-size:0.76rem;color:var(--muted);margin-top:2px}
-
 .escala-list{display:flex;flex-direction:column;gap:14px}
 .escala-card{
   background:var(--surface);border-radius:var(--r);border:1px solid var(--border);
-  padding:18px;box-shadow:var(--sh);position:relative;overflow:hidden;
+  padding:18px;box-shadow:var(--sh);position:relative;
 }
-.escala-card.current{border:2px solid var(--accent);background:var(--surface)}
+.escala-card.current{border:2px solid var(--accent)}
 .esc-header{display:flex;align-items:center;gap:12px;margin-bottom:16px}
 .esc-num{
   width:32px;height:32px;border-radius:8px;background:var(--cream-d);
@@ -290,11 +243,7 @@ body{
 .escala-card.current .esc-num{background:var(--accent);color:#fff}
 .esc-header-info{flex:1}
 .esc-date{font-weight:700;font-size:1rem;color:var(--stone-d)}
-.esc-week-label{font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-top:1px}
-.esc-badge{
-  background:var(--accent);color:#fff;font-size:0.62rem;font-weight:700;
-  padding:3px 8px;border-radius:99px;text-transform:uppercase;
-}
+.esc-week-label{font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
 
 .esc-members{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
 .member-chip{
@@ -306,73 +255,6 @@ body{
   width:20px;height:20px;border-radius:50%;background:var(--mauve);
   color:#fff;font-size:0.65rem;display:flex;align-items:center;justify-content:center;
 }
-
-.esc-footer{
-  display:flex;align-items:center;justify-content:space-between;
-  padding-top:14px;border-top:1px solid var(--border);
-}
-.alarm-indicator{display:flex;align-items:center;gap:6px;font-size:0.75rem;font-weight:600;color:var(--muted)}
-.alarm-indicator.set{color:var(--success)}
-.alarm-dot{width:8px;height:8px;border-radius:50%;background:var(--border)}
-.alarm-indicator.set .alarm-dot{background:var(--success);box-shadow:0 0 8px var(--success)}
-
-.esc-actions{display:flex;gap:8px}
-
-/* ── LOCALIZAÇÃO ── */
-.local-card{
-  background:var(--surface);border-radius:var(--r);border:1px solid var(--border);
-  padding:20px;box-shadow:var(--sh);margin-bottom:16px;
-}
-.map-placeholder{
-  width:100%;aspect-ratio:16/9;background:var(--cream-d);border-radius:var(--r-sm);
-  margin-bottom:16px;display:flex;align-items:center;justify-content:center;
-  font-size:2rem;border:1px solid var(--border);overflow:hidden;
-}
-.local-info h3{font-family:'Cormorant Garamond',serif;font-size:1.35rem;margin-bottom:6px;color:var(--stone-d)}
-.local-info p{font-size:0.88rem;color:var(--stone);line-height:1.5;margin-bottom:16px}
-
-/* ── ADM ── */
-.adm-tabs{display:flex;gap:8px;margin-bottom:16px;overflow-x:auto;padding-bottom:4px}
-.adm-tab{
-  height:36px;padding:0 16px;border-radius:99px;border:1.5px solid var(--border);
-  background:var(--surface);color:var(--muted);font-family:'DM Sans',sans-serif;
-  font-size:0.82rem;font-weight:600;cursor:pointer;white-space:nowrap;transition:all .15s;
-}
-.adm-tab.active{background:var(--stone-d);color:var(--cream);border-color:var(--stone-d)}
-
-.adm-panel{display:none}
-.adm-panel.active{display:block}
-
-.form-card{
-  background:var(--surface);border-radius:var(--r);border:1px solid var(--border);
-  padding:18px;margin-bottom:20px;box-shadow:var(--sh);
-}
-.form-card h3{font-size:1rem;margin-bottom:14px;color:var(--stone-d)}
-.fld{margin-bottom:14px}
-.fld label{display:block;font-size:0.75rem;font-weight:700;text-transform:uppercase;color:var(--muted);margin-bottom:5px;letter-spacing:.03em}
-.fld input,.fld select{
-  width:100%;height:44px;border:1.5px solid var(--border);border-radius:var(--r-sm);
-  padding:0 12px;font-family:'DM Sans',sans-serif;font-size:0.95rem;outline:none;
-  background:var(--bg);color:var(--text);transition:border-color .2s;
-}
-.fld input:focus{border-color:var(--accent)}
-.fld-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-
-.user-list{display:flex;flex-direction:column;gap:10px}
-.user-row{
-  background:var(--surface);padding:12px;border-radius:var(--r-sm);
-  border:1px solid var(--border);display:flex;align-items:center;gap:12px;
-}
-.user-av{
-  width:36px;height:36px;border-radius:50%;background:var(--cream-d);
-  display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--stone);
-}
-.user-info{flex:1}
-.user-name{font-weight:700;font-size:0.88rem}
-.user-login{font-size:0.72rem;color:var(--muted)}
-.role-tag{font-size:0.6rem;font-weight:700;padding:2px 6px;border-radius:4px;text-transform:uppercase}
-.role-adm{background:var(--accent-l);color:var(--accent)}
-.role-membro{background:var(--cream-d);color:var(--muted)}
 
 /* ── SHEETS ── */
 .sheet-overlay{
@@ -394,77 +276,6 @@ body{
 }
 .sheet h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;margin-bottom:18px;color:var(--stone-d)}
 
-.login-err{
-  background:rgba(192,84,74,0.1);color:var(--danger);
-  padding:10px;border-radius:8px;font-size:0.82rem;margin-bottom:16px;
-  display:none;text-align:center;font-weight:600;
-}
-
-/* member picker */
-.member-picker{
-  display:grid;grid-template-columns:repeat(auto-fill, minmax(80px, 1fr));gap:8px;
-  max-height:180px;overflow-y:auto;padding:4px;
-}
-.member-pick-btn{
-  background:var(--surface);border:1.5px solid var(--border);border-radius:12px;
-  padding:10px 4px;cursor:pointer;display:flex;flex-direction:column;
-  align-items:center;gap:6px;font-size:0.72rem;font-weight:600;color:var(--muted);
-  transition:all .15s;
-}
-.member-pick-btn.sel{border-color:var(--accent);background:var(--accent-l);color:var(--accent)}
-.member-pick-av{
-  width:28px;height:28px;border-radius:50%;background:var(--cream-d);
-  display:flex;align-items:center;justify-content:center;font-size:0.75rem;
-}
-.member-pick-btn.sel .member-pick-av{background:var(--accent);color:#fff}
-
-/* toggle */
-.alarm-section{background:var(--surface);border:1.5px solid var(--border);border-radius:16px;padding:16px;margin-bottom:18px}
-.alarm-section-title{font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--stone);margin-bottom:12px;display:flex;align-items:center;gap:6px}
-.alarm-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.alarm-label{font-size:0.9rem;font-weight:700;color:var(--stone-d)}
-.alarm-sub{font-size:0.75rem;color:var(--muted);margin-top:1px}
-.alarm-datetime{
-  width:100%;height:44px;border:1.5px solid var(--border);border-radius:10px;
-  padding:0 12px;font-family:inherit;font-size:0.95rem;margin-top:12px;
-  background:var(--bg);outline:none;
-}
-.toggle{position:relative;width:44px;height:24px;cursor:pointer}
-.toggle input{opacity:0;width:0;height:0}
-.toggle-track{position:absolute;inset:0;background:var(--border);border-radius:99px;transition:.2s}
-.toggle-thumb{position:absolute;top:3px;left:3px;width:18px;height:18px;background:#fff;border-radius:50%;transition:.2s;box-shadow:0 1px 3px rgba(0,0,0,0.1)}
-.toggle input:checked + .toggle-track{background:var(--success)}
-.toggle input:checked ~ .toggle-thumb{left:23px}
-
-/* ── FAB ── */
-.fab{
-  position:fixed;bottom:calc(var(--bar-h) + var(--safe-b) + 16px);right:16px;z-index:150;
-  width:56px;height:56px;border-radius:50%;background:var(--stone-d);color:var(--cream);
-  border:none;box-shadow:var(--sh-lg);font-size:1.8rem;cursor:pointer;
-  display:none;align-items:center;justify-content:center;transition:all .2s;
-}
-.fab.show{display:flex;animation:pop .3s cubic-bezier(0.34, 1.56, 0.64, 1)}
-@keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
-.fab:active{transform:scale(.9)}
-
-/* ── EMPTY ── */
-.empty{text-align:center;padding:52px 20px;color:var(--muted);font-size:0.88rem;line-height:1.6}
-.empty .ico{font-size:2.6rem;margin-bottom:12px;display:block}
-
-/* ── TOAST ── */
-.toast{
-  position:fixed;bottom:calc(var(--bar-h) + var(--safe-b) + 14px);left:50%;
-  transform:translateX(-50%) translateY(10px);
-  background:var(--stone-d);color:var(--cream);
-  padding:12px 22px;border-radius:99px;font-size:0.875rem;font-weight:500;
-  box-shadow:var(--sh-lg);z-index:999;
-  opacity:0;transition:all .26s;pointer-events:none;white-space:nowrap;
-}
-.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-.toast.ok{background:var(--stone-d)}
-.toast.err{background:var(--danger)}
-.toast.warn{background:#9a7a30}
-
 /* ── DESKTOP ── */
 @media(min-width:640px){
   body{padding-top:64px;padding-bottom:0}
@@ -472,8 +283,6 @@ body{
   .top-nav{padding-left:28px;padding-right:28px}
   .tab-bar{display:none}
   .desktop-links{display:flex}
-  .fab{bottom:24px}
-  .toast{bottom:28px}
 }
 </style>
 </head>
@@ -482,7 +291,7 @@ body{
 <!-- TOP NAV -->
 <nav class="top-nav">
   <div class="nav-logo">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAQr0lEQVR42u1Zaa9l11FdVbX3Off2u+/1kJ7s7tjt2ElwjHESQiIgQkEKSIgPCMQf5CtfAAmEAiIEApnJYIKntNtDt93ubref+w33nnP2rlp82Of2YH4AQvR90rvzubX2XlW1am05vnsD/5dviv/jt8cAHgN4DOAxgMcAHgN4DOB/85ba3fU33lIRAVRFRVREk4mImompmGpKlpKaCgQioqKiAEQEAqD9h2z/KAISYLu+zI9k+6C9Qsb8ATIAMAIiIElGBMlwZzBIkiAJhrdnceb8+QcAkhkAFSgBUgAjoSKkCQRQVVWVFrCKqkJERAGKCOZwW4wKEWnRigBAxAMkoltgIgSELXwABEUVAMl5aQA1o4QwSCFJdwgCAOWRHQApMl9NBGrWLmCmIjrviYpA5g2SthOPhNvCEBWIzmE1YGZ0BygQgCoCCBkNPEGS24j4YL+2WxoiYMNFiKgKnJXxCAB6FdEAVUXVLJmqak4iEFWRLYr54f2gISLtYUPOACAqEuFzCBARgWpbo/tsassloGiChk8jyZmKfACG4Eyp7ddnEOGfABCVtUWt8+KB7pKSqIqqmj0crogICLmfAnK/KMhMp3kZRRWC+ZuijfnzW8L5q2JI2evEiC0Tt6TjgyyCCMOj+pa9D1OosdxsXk4GYGaqKvTQnAWU+xkLIgIzmPml+WfURIVBaes5X60xbV560e2ObcGQFDMN8yiIEFVCwNgSLACCDmiQmNPq0R2YaSIPGGFmebkUFZ8m1gLttrnwgDPbPVFua4yoARDlNq+k5cVMaHnwLWwzlaQgQGrKEQ7RdjEC9CCD4QwCwqCKhBrD9X/uACIIQKGS1Iwkgy1z0TJBVUTUkqgy6kwLNVFr8TSuRbDtoIoEaarcZqaH33+KbWo+XNRFLKK2hLWUGFHGyiC3zIoIEkHGtv7q/TuGRy0AKKJm9DptjuswECIpbZlChtPrlnYGs8ZiVZ1KvXdw5O4f3L7rwePNICJHx5uplKmUzThZSuNUHyoxc1K3FQIgZqoKAhFmSS0RaFnktYzDsMUivqWQbhOmraUyQkgxFTMEMfcXbisBGE4GCKillE2ttRU1vf7+rVLrWMqtOx+JyvWbtwncvHP38Gh9vN58cPtDMXvljWsffXyQTBiBtrYNhGxLhCUCFCnjUMYRQXpEhNdKgEQEI2Jb4rYUyos+wlmKqLWamxaLmEa0tmVz05VW0d2ZU0r54GhNxt7uTjjD48LZM6WWnOzSxXMgzn/qTCn1wqdOi2DR51rK5vDw8sVPKcLLBLI12JlLraWoCGA5M8hwoUPEay1TCYpaalUq4j6D7idxSuIgKaYpZ7qz/ca8B7LNBxFVQk1lHIef/fK1K5efOHlyFTWUunfmFBgAzy8WXurZMydF5MTeiuMY7k+cOw2VndUCIKpHcTPTnBFsJCylztUx6KhzfohG69oMAmoWERANfqIPkGomqgKCgUCMrjm3t7y6JQuvCpszN6U3r755Zm915ekn6zhm07FMb159a5qKqX7myqeXy57kezdv37pz94XPP9PlvN5srr59XSAMXy6Xz1558tbtuzfv7PddrtX7vv/sM5c9GuNbZYuZtwBFSA0iIsBWUR5NYoiqmeYkQHgFA4LW/CyZqIhASIQDtJSm4j/42St/9+3v375917ru44Pjv/jLvz04OLzyzOVhGN5594YphP7Tl1/9m2/967W3bmjSZPYvP/zP165dP3/h7N9/54ff+f4vNsP01//4fQBPPnHu44OjcZx0bsMUhqhqSinnlDvLfer7xSJ3SVRVpHHt4SSOiIioFSpqZn2flgtRWM79zk5KqYmc1n8tpzffvvH1r7x4/uypl1/5lXTdd773k+Pj9W9/5ddPL7uvfvXFLzz3aYa/e+PmlUvnv/rF53/0i1dRqym6nJZdvnj5fJfzO+/dWi771YnFou+6nF56/pkuGxlNlqLVa1FVTTn3fZdySmaguMeswx4G4N6qaK3jSIaXSQDrOlVluAhVFSRExSxq/a83rgGxs1y88db12Bwfb4a9vRXcSyn/9M8/+Ifv/kRUX/nV24dHx12yGzfvfHD7Q0taS7lzd/8H//6zC+dO/8kf/k4pleT1929978f/eefufsp5WyqS5U7NzExTMrOm34NSnbV6cT7cAABgmmopER550atZlOJlAhCl1GHDYOu+jMhd9871mzvL/sTJvZeef/bje0dvXrv+0vPPfXBn/9aH+3nv5LV3b7773q39jz6epvL555764hc+s7da/uBnr8B0qr63u/PVlz7/p9/82pnTu7XWUsqvPfvUH/3xNz795MVxGLdad9vjzUAI2JS8CXd3uuUiRSDi0SpU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" alt="Logo Ágape">
+    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=100" alt="Logo Ágape">
     <div class="nav-logo-text">Célula <em>Ágape</em></div>
   </div>
   <div class="desktop-links" id="desktop-links">
@@ -504,8 +313,6 @@ body{
   <button class="tab-btn" data-page="adm" onclick="goPage('adm')" id="tb-adm" style="display:none"><span class="tab-icon">⚙️</span><span class="tab-label">ADM</span></button>
 </div>
 
-<button class="fab" id="fab-escala" onclick="openSheet('escala-sheet')">＋</button>
-
 <!-- ════ HOME ════ -->
 <div class="page active" id="page-home">
   <div class="hero">
@@ -522,7 +329,6 @@ body{
     </div>
   </div>
   <div class="container">
-    <div id="install-banner-home"></div>
     <div id="prox-home"></div>
     <div class="quick-grid">
       <div class="quick-card" onclick="scrollToMural()"><div class="qc-icon">📖</div><div class="qc-title">Mural</div><div class="qc-sub">Versículos e mensagens</div></div>
@@ -558,7 +364,6 @@ body{
 <div class="page" id="page-escala">
   <div class="container">
     <div class="sec-hdr"><h2>Escala de Lanche</h2><p>Responsáveis em cada semana</p></div>
-    <div id="notif-banner-escala"></div>
     <div class="escala-list" id="escala-list"></div>
   </div>
 </div>
@@ -568,10 +373,9 @@ body{
   <div class="container">
     <div class="sec-hdr"><h2>Localização</h2><p>Onde nos reunimos</p></div>
     <div class="local-card">
-      <div class="map-placeholder">📍</div>
       <div class="local-info">
         <h3>Nossa Célula</h3>
-        <p>Rua Exemplo, 123 - Bairro, Aparecida de Goiânia - GO</p>
+        <p>Aparecida de Goiânia - GO</p>
         <button class="btn btn-primary btn-full" onclick="window.open('https://maps.google.com')">Abrir no Google Maps</button>
       </div>
     </div>
@@ -588,280 +392,80 @@ body{
       <button class="adm-tab" onclick="admTab('escala-a',this)">Escala</button>
     </div>
     <div class="adm-panel active" id="adm-usuarios">
-      <div class="form-card">
-        <h3>Adicionar usuário</h3>
-        <div class="fld-2">
-          <div class="fld"><label>Nome</label><input id="new-name" type="text" placeholder="Nome" autocomplete="off"></div>
-          <div class="fld"><label>Login</label><input id="new-login" type="text" placeholder="login" autocomplete="off"></div>
-        </div>
-        <div class="fld-2">
-          <div class="fld"><label>Senha</label><input id="new-pass" type="password" placeholder="••••••"></div>
-          <div class="fld"><label>Perfil</label><select id="new-role"><option value="membro">Membro</option><option value="adm">ADM</option></select></div>
-        </div>
-        <button class="btn btn-primary btn-full" onclick="addUser()">Adicionar</button>
-      </div>
       <div class="user-list" id="user-list"></div>
     </div>
     <div class="adm-panel" id="adm-posts">
       <div class="posts-list" id="adm-posts-list"></div>
     </div>
     <div class="adm-panel" id="adm-escala-a">
-      <button class="btn btn-primary" style="margin-bottom:14px;height:46px;padding:0 22px;border-radius:12px" onclick="openSheet('escala-sheet')">＋ Adicionar semana</button>
       <div class="escala-list" id="adm-escala-list"></div>
     </div>
   </div>
 </div>
-
-<!-- ════ SHEETS ════ -->
 
 <!-- Login -->
 <div class="sheet-overlay" id="login-sheet" onclick="sheetBg(event,'login-sheet')">
   <div class="sheet">
     <div class="sheet-handle"></div>
     <h2>Entrar na Célula</h2>
-    <div class="login-err" id="login-err">Login ou senha incorretos.</div>
-    <div class="fld"><label>Login</label>
-      <input id="li-user" type="text" placeholder="seu.login" autocomplete="username" inputmode="text"
-        onkeydown="if(event.key==='Enter')document.getElementById('li-pass').focus()">
-    </div>
-    <div class="fld"><label>Senha</label>
-      <input id="li-pass" type="password" placeholder="••••••" autocomplete="current-password"
-        onkeydown="if(event.key==='Enter')doLogin()">
-    </div>
+    <div class="fld"><label>Login</label><input id="li-user" type="text" placeholder="seu.login"></div>
+    <div class="fld"><label>Senha</label><input id="li-pass" type="password" placeholder="••••••"></div>
     <button class="btn btn-primary btn-full" onclick="doLogin()">Entrar</button>
   </div>
 </div>
 
-<!-- Escala - novo (com membros + alarme) -->
-<div class="sheet-overlay" id="escala-sheet" onclick="sheetBg(event,'escala-sheet')">
-  <div class="sheet">
-    <div class="sheet-handle"></div>
-    <h2>Nova Escala de Lanche</h2>
-
-    <div class="fld">
-      <label>Data da célula</label>
-      <input id="esc-date" type="date">
-    </div>
-
-    <div class="fld">
-      <label>Responsáveis pelo lanche</label>
-      <div class="member-picker" id="member-picker">
-        <!-- populated by JS -->
-      </div>
-      <div style="font-size:0.75rem;color:var(--muted);margin-top:4px">Selecione um ou mais membros</div>
-    </div>
-
-    <!-- Alarm Section -->
-    <div class="alarm-section">
-      <div class="alarm-section-title">🔔 Alarme de Lembrete</div>
-
-      <div class="alarm-row">
-        <div>
-          <div class="alarm-label">Ativar alarme</div>
-          <div class="alarm-sub">Notificar os responsáveis</div>
-        </div>
-        <label class="toggle">
-          <input type="checkbox" id="alarm-toggle" onchange="toggleAlarmOptions()">
-          <div class="toggle-track"></div>
-          <div class="toggle-thumb"></div>
-        </label>
-      </div>
-
-      <div id="alarm-options" style="display:none; margin-top: 10px; font-size: 0.85rem; color: var(--muted);">
-        <p>Os responsáveis receberão notificações diárias às 12:00, de segunda até o dia da célula.</p>
-      </div>
-    </div>
-
-    <button class="btn btn-primary btn-full" onclick="addEscala()">Salvar Escala</button>
-  </div>
-</div>
-
-<!-- Alarme edit sheet -->
-<div class="sheet-overlay" id="alarm-edit-sheet" onclick="sheetBg(event,'alarm-edit-sheet')">
-  <div class="sheet">
-    <div class="sheet-handle"></div>
-    <h2>Editar Alarme</h2>
-    <input type="hidden" id="alarm-edit-id">
-
-    <div class="alarm-section">
-      <div class="alarm-section-title">🔔 Alarme de Escala</div>
-      <p style="font-size: 0.85rem; color: var(--muted); margin-top: 8px;">As notificações são enviadas diariamente às 12:00, de segunda até o dia da célula.</p>
-    </div>
-
-    <div style="display:flex;gap:10px;margin-top:4px">
-      <button class="btn btn-ghost btn-full" style="flex:1" onclick="removeAlarm()">🗑 Remover alarme</button>
-      <button class="btn btn-primary btn-full" style="flex:1" onclick="saveAlarmEdit()">Salvar</button>
-    </div>
-  </div>
-</div>
-
 <div class="toast" id="toast"></div>
-<script>
-/* ══════════════════════════════════════════
-   CÉLULA ÁGAPE — Script principal
-   Supabase como backend, localStorage para sessão
-══════════════════════════════════════════ */
 
-// ── CONFIG ──
+<script>
 const SUPA_URL = 'https://wtggqitutdfazzyziqmb.supabase.co';
 const SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind0Z2dxaXR1dGRmYXp6eXppcW1iIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUwMDYxODMsImV4cCI6MjA5MDU4MjE4M30.EMyKuvQxVHCKhVBJVTAebnLamLNorYS3DjIVZo_lgFM';
 const db = supabase.createClient(SUPA_URL, SUPA_KEY);
-const VAPID_PUBLIC_KEY = 'BKeHmk9L2sE3UuYXI0H-dwG0rh_1bzSI45HPVtGTpMJcP5X_FDT8AjGVX79tDz8hnffFLgEOcISdCCDQ81FF2lQ';
 
-// ── STATE ──
-let S = { me:null, postType:'versiculo', swReady:false, deferredInstall:null,
-          users:[], posts:[], escala:[] };
-
-// ══════════════════════════════════════════
-// DB — funções simples e diretas
-// ══════════════════════════════════════════
-
-async function tudo(tabela, ordem, crescente=false) {
-  let q = db.from(tabela).select('*');
-  if (ordem) q = q.order(ordem, { ascending: crescente });
-  const { data, error } = await q;
-  if (error) { console.error('[DB]', tabela, error.message); return null; }
-  return data || [];
-}
-
-async function inserir(tabela, dados) {
-  const { data, error } = await db.from(tabela).insert(dados).select().single();
-  if (error) { console.error('[INSERT]', tabela, error.message); return null; }
-  return data;
-}
-
-async function atualizar(tabela, id, campos) {
-  const { error } = await db.from(tabela).update(campos).eq('id', id);
-  if (error) { console.error('[UPDATE]', tabela, error.message); return false; }
-  return true;
-}
-
-async function deletar(tabela, id) {
-  const { error } = await db.from(tabela).delete().eq('id', id);
-  if (error) { console.error('[DELETE]', tabela, error.message); return false; }
-  return true;
-}
-
-// ══════════════════════════════════════════
-// INICIALIZAÇÃO
-// ══════════════════════════════════════════
+let S = { me:null, postType:'versiculo', users:[], posts:[], escala:[], muralLimit: 5 };
 
 async function iniciar() {
-  mostrarLoading('Carregando…');
-  try {
-    const [users, posts, semanas, membros] = await Promise.all([
-      tudo('users', 'created_at', true),
-      tudo('posts', 'created_at', false),
-      tudo('escala_semanas', 'date', true),
-      tudo('escala_membros')
-    ]);
+  const [users, posts, semanas, membros] = await Promise.all([
+    db.from('users').select('*').order('name'),
+    db.from('posts').select('*').order('created_at', { ascending: false }),
+    db.from('escala_semanas').select('*').order('date'),
+    db.from('escala_membros').select('*')
+  ]);
 
-    if (!users || !posts || !semanas || !membros) {
-      throw new Error('Falha ao buscar dados do Supabase');
-    }
+  S.users = users.data || [];
+  S.posts = posts.data || [];
+  S.escala = (semanas.data || []).map(s => ({
+    ...s,
+    members: (membros.data || []).filter(m => m.escala_id === s.id)
+  }));
 
-    S.users  = users;
-    S.posts  = posts;
-    S.escala = montarEscala(semanas, membros);
-
-    if (!S.users.length) await criarAdmin();
-
-    restaurarSessao();
-
-    renderPosts();
-    renderEscala();
-    renderHome();
-    renderBannerInstall();
-
-    ligarRealtime();
-
-  } catch(e) {
-    console.error('[iniciar] ERRO:', e);
-    toast('Erro ao conectar. Tente recarregar.', 'err');
-  } finally {
-    esconderLoading();
-  }
+  restaurarSessao();
+  renderHome();
+  renderPosts();
+  renderEscala();
 }
-
-function montarEscala(semanas, membros) {
-  return semanas.map(s => {
-    const mems = membros.filter(m => m.escala_id === s.id);
-    return {
-      ...s,
-      date:    new Date(s.date + 'T12:00:00'),
-      dateStr: new Date(s.date + 'T12:00:00').toLocaleDateString('pt-BR',
-               { day:'2-digit', month:'long', year:'numeric' }),
-      members: mems.map(m => ({ id: m.user_id, name: m.user_name })),
-      alarm:   s.alarm_ts ? {
-        ts:       new Date(s.alarm_ts).getTime(),
-        extra1d:  s.alarm_1d,
-        extra3h:  s.alarm_3h,
-        extra30m: s.alarm_30m
-      } : null
-    };
-  });
-}
-
-async function criarAdmin() {
-  const a = await inserir('users',
-    { name:'Administrador', login:'admin', pass_hash:'agape2024', role:'adm' });
-  if (a) S.users = [a];
-}
-
-// ══════════════════════════════════════════
-// SESSÃO
-// ══════════════════════════════════════════
 
 function restaurarSessao() {
-  try {
-    const raw = localStorage.getItem('agape_sessao');
-    if (!raw) return;
-    const salvo = JSON.parse(raw);
-    const encontrado = S.users.find(u => u.id === salvo.id);
-    if (encontrado) {
-      S.me = encontrado;
-      atualizarAuth();
-      setTimeout(registrarPushSubscription, 1500);
-    } else {
-      localStorage.removeItem('agape_sessao');
-    }
-  } catch(e) { localStorage.removeItem('agape_sessao'); }
+  const salvo = localStorage.getItem('agape_sessao');
+  if (salvo) {
+    S.me = JSON.parse(salvo);
+    atualizarAuth();
+  }
 }
 
 async function doLogin() {
-  const login = document.getElementById('li-user').value.trim();
+  const login = document.getElementById('li-user').value;
   const senha = document.getElementById('li-pass').value;
-  const errEl = document.getElementById('login-err');
-
-  if (!login || !senha) {
-    errEl.style.display='block'; errEl.textContent='Preencha login e senha.'; return;
+  const { data } = await db.from('users').select('*').eq('login', login).eq('pass_hash', senha).maybeSingle();
+  
+  if (data) {
+    S.me = data;
+    localStorage.setItem('agape_sessao', JSON.stringify(data));
+    atualizarAuth();
+    closeSheet('login-sheet');
+    toast('Bem-vindo!');
+  } else {
+    toast('Login incorreto', 'err');
   }
-
-  const { data, error } = await db.from('users')
-    .select('*').eq('login', login).eq('pass_hash', senha).maybeSingle();
-
-  if (error) console.error('[login]', error.message);
-
-  if (!data) {
-    errEl.style.display='block'; errEl.textContent='Login ou senha incorretos.'; return;
-  }
-
-  errEl.style.display = 'none';
-  S.me = data;
-
-  const idx = S.users.findIndex(u => u.id === data.id);
-  if (idx >= 0) S.users[idx] = data; else S.users.push(data);
-
-  localStorage.setItem('agape_sessao', JSON.stringify(data));
-
-  document.getElementById('li-user').value = '';
-  document.getElementById('li-pass').value = '';
-  closeSheet('login-sheet');
-  atualizarAuth();
-  atualizarPills();
-  renderPosts(); renderEscala(); renderHome();
-  toast('Bem-vindo(a), ' + data.name.split(' ')[0] + '! 🙏');
-  setTimeout(registrarPushSubscription, 1000);
 }
 
 function doLogout() {
@@ -869,582 +473,144 @@ function doLogout() {
   localStorage.removeItem('agape_sessao');
   atualizarAuth();
   goPage('home');
-  toast('Até logo! 👋');
 }
 
 function atualizarAuth() {
-  const nr  = document.getElementById('nav-right');
-  const tb  = document.getElementById('tb-adm');
-  const dla = document.getElementById('dl-adm');
-  const fab = document.getElementById('fab-escala');
-
+  const nr = document.getElementById('nav-right');
+  const adm = S.me?.role === 'adm';
+  
   if (S.me) {
-    const adm = S.me.role === 'adm';
-    nr.innerHTML = `
-      <div class="user-chip">
-        <div class="u-avatar">${S.me.name[0]}</div>
-        ${adm ? '<span class="adm-pip">ADM</span>' : ''}
-      </div>
-      ${adm ? '<button class="btn btn-ghost" onclick="doLogout()">Sair</button>' : ''}`;
-    if (adm) { tb.style.display=''; if(dla) dla.style.display=''; }
+    nr.innerHTML = `<div class="user-chip"><div class="u-avatar">${S.me.name[0]}</div></div>`;
+    if (adm) {
+      nr.innerHTML += `<button class="btn btn-ghost" onclick="doLogout()">Sair</button>`;
+      document.getElementById('tb-adm').style.display = 'flex';
+      document.getElementById('dl-adm').style.display = 'block';
+    }
     document.getElementById('compose-area').style.display = 'block';
-    atualizarPills();
-    document.getElementById('hac-icon').textContent  = '👤';
-    document.getElementById('hac-title').textContent = 'Conta';
-    document.getElementById('hac-sub').textContent   = adm ? 'Sair da conta' : 'Você está logado';
-    document.getElementById('home-auth-card').onclick = adm ? doLogout : null;
   } else {
     nr.innerHTML = `<button class="btn btn-primary" onclick="openSheet('login-sheet')">Entrar</button>`;
-    tb.style.display = 'none';
-    if (dla) dla.style.display = 'none';
-    fab.classList.remove('show');
+    document.getElementById('tb-adm').style.display = 'none';
+    document.getElementById('dl-adm').style.display = 'none';
     document.getElementById('compose-area').style.display = 'none';
-    document.getElementById('hac-icon').textContent  = '🔐';
-    document.getElementById('hac-title').textContent = 'Entrar';
-    document.getElementById('hac-sub').textContent   = 'Acessar sua conta';
-    document.getElementById('home-auth-card').onclick = () => openSheet('login-sheet');
   }
 }
-
-// ── REALTIME ──
-
-function ligarRealtime() {
-  db.channel('rt-posts')
-    .on('postgres_changes', { event:'INSERT', schema:'public', table:'posts' }, p => {
-      if (!S.posts.find(x => x.id === p.new.id)) {
-        S.posts.unshift(p.new);
-        renderPosts(); renderAdmPosts();
-      }
-    })
-    .on('postgres_changes', { event:'DELETE', schema:'public', table:'posts' }, p => {
-      S.posts = S.posts.filter(x => x.id !== p.old.id);
-      renderPosts(); renderAdmPosts();
-    })
-    .subscribe();
-
-  db.channel('rt-escala')
-    .on('postgres_changes', { event:'*', schema:'public', table:'escala_semanas' }, () => recarregarEscala())
-    .on('postgres_changes', { event:'*', schema:'public', table:'escala_membros' }, () => recarregarEscala())
-    .subscribe();
-
-  db.channel('rt-users')
-    .on('postgres_changes', { event:'*', schema:'public', table:'users' }, () => {
-      tudo('users','created_at',true).then(u => { if(u) { S.users=u; renderUsers(); }});
-    })
-    .subscribe();
-}
-
-async function recarregarEscala() {
-  const [semanas, membros] = await Promise.all([
-    tudo('escala_semanas','date',true),
-    tudo('escala_membros')
-  ]);
-  if (semanas && membros) {
-    S.escala = montarEscala(semanas, membros);
-    renderEscala(); renderAdmEscala(); renderHome();
-  }
-}
-
-// ── NAVEGAÇÃO ──
 
 function goPage(id) {
-  if (id === 'mural') id = 'home';
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById('page-' + id).classList.add('active');
-  document.querySelectorAll('.tab-btn').forEach(b =>
-    b.classList.toggle('active', b.dataset.page === id));
-  document.querySelectorAll('#desktop-links button').forEach(b =>
-    b.classList.toggle('active', (b.getAttribute('onclick')||'').includes("'"+id+"'")));
-  document.getElementById('fab-escala')
-    .classList.toggle('show', id === 'escala' && S.me?.role === 'adm');
-  if (id === 'escala') { renderEscala(); renderBannerNotif(); }
-  if (id === 'adm')    { renderUsers(); renderAdmPosts(); renderAdmEscala(); }
-  if (id === 'home')   { renderHome(); renderBannerInstall(); }
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.page === id));
+  window.scrollTo(0,0);
 }
 
 function scrollToMural() {
-  goPage('home');
   document.getElementById('mural-home-section').scrollIntoView({ behavior: 'smooth' });
 }
 
-let S_muralLimit = 5;
 function verMuralCompleto() {
-  S_muralLimit = 100;
+  S.muralLimit = 100;
   renderPosts();
   document.getElementById('mural-more-btn').style.display = 'none';
 }
 
-// ── SHEETS / TOAST / LOADING ──
-
-function openSheet(id) {
-  document.getElementById(id).classList.add('open');
-  if (id === 'escala-sheet') setTimeout(renderMemberPicker, 80);
-}
-function closeSheet(id) { document.getElementById(id).classList.remove('open'); }
-function sheetBg(e, id) { if (e.target === document.getElementById(id)) closeSheet(id); }
-
-function toast(msg, tipo='ok') {
-  const t = document.getElementById('toast');
-  t.textContent = msg; t.className = 'toast show ' + tipo;
-  clearTimeout(t._t); t._t = setTimeout(() => t.className = 'toast', 3000);
-}
-
-function mostrarLoading(msg) {
-  let el = document.getElementById('loading-overlay');
-  if (!el) {
-    el = document.createElement('div'); el.id = 'loading-overlay';
-    el.style.cssText = 'position:fixed;inset:0;z-index:500;background:rgba(245,237,228,0.9);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;font-family:DM Sans,sans-serif;color:#4a4040;';
-    el.innerHTML = '<div style="font-size:2.5rem">🙏</div><div style="font-size:0.9rem;font-weight:600">' + msg + '</div>';
-    document.body.appendChild(el);
+function renderHome() {
+  const el = document.getElementById('prox-home');
+  const hoje = new Date().toISOString().split('T')[0];
+  const p = S.escala.find(e => e.date >= hoje);
+  
+  if (p) {
+    const nomes = p.members.map(m => m.user_name.split(' ')[0]).join(' & ');
+    el.innerHTML = `
+      <div class="prox-banner">
+        <div class="pb-icon">🧁</div>
+        <div style="flex:1">
+          <div class="pb-label">Próximo lanche</div>
+          <div class="pb-name">${nomes}</div>
+          <div class="pb-date">${new Date(p.date + 'T12:00:00').toLocaleDateString('pt-BR')}</div>
+        </div>
+        <button class="btn btn-accent" onclick="goPage('escala')">Ver mês</button>
+      </div>`;
   }
 }
-function esconderLoading() {
-  document.getElementById('loading-overlay')?.remove();
-}
-
-// ── PWA INSTALL ──
-
-window.addEventListener('beforeinstallprompt', e => {
-  e.preventDefault(); S.deferredInstall = e; renderBannerInstall();
-});
-window.addEventListener('appinstalled', () => {
-  S.deferredInstall = null;
-  document.getElementById('install-banner-home').innerHTML = '';
-  toast('App instalado! 🎉');
-});
-function renderBannerInstall() {
-  const el = document.getElementById('install-banner-home');
-  if (!el || !S.deferredInstall) return;
-  el.innerHTML = `<div class="install-banner">
-    <div class="ib-icon">📲</div>
-    <div class="ib-text"><div class="ib-title">Instalar o App</div>
-    <div class="ib-sub">Adicione à tela inicial para notificações</div></div>
-    <button class="ib-btn" onclick="instalarPWA()">Instalar</button>
-    <button class="ib-close" onclick="dispensarInstall()">✕</button>
-  </div>`;
-}
-async function instalarPWA() {
-  if (!S.deferredInstall) return;
-  S.deferredInstall.prompt();
-  await S.deferredInstall.userChoice;
-  S.deferredInstall = null;
-}
-function dispensarInstall() {
-  S.deferredInstall = null;
-  document.getElementById('install-banner-home').innerHTML = '';
-}
-
-// ── SERVICE WORKER ──
-
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js').then(r => {
-    S.swReady = true;
-  }).catch(e => console.warn('SW:', e));
-}
-
-// ── NOTIFICAÇÕES ──
-
-async function pedirPermissaoNotif() {
-  if (!('Notification' in window)) { toast('Navegador não suporta notificações.','warn'); return false; }
-  if (Notification.permission === 'granted') return true;
-  if (Notification.permission === 'denied')  { toast('Notificações bloqueadas.','warn'); return false; }
-  return (await Notification.requestPermission()) === 'granted';
-}
-function renderBannerNotif() {
-  const el = document.getElementById('notif-banner-escala');
-  if (!el) return;
-  if (Notification.permission === 'granted') { el.innerHTML=''; return; }
-  el.innerHTML = `<div class="notif-banner">
-    <span style="font-size:1.8rem;flex-shrink:0">🔔</span>
-    <div class="nb-text"><div class="nb-title">Ativar notificações</div>
-    <div class="nb-sub">Receba lembretes do lanche</div></div>
-    <button class="btn btn-accent" style="height:36px;padding:0 14px;font-size:0.8rem;flex-shrink:0"
-      onclick="pedirPermissaoNotif().then(renderBannerNotif)">Ativar</button>
-  </div>`;
-}
-
-// ── PUSH REGISTRATION ──
-
-function vapidKeyToUint8(base64url) {
-  const b64 = base64url.replace(/-/g,'+').replace(/_/g,'/');
-  const raw = atob(b64.padEnd(b64.length + (4-b64.length%4)%4,'='));
-  return Uint8Array.from(raw, c => c.charCodeAt(0));
-}
-
-async function registrarPushSubscription() {
-  if (!S.me) return;
-  if (!('serviceWorker' in navigator) || !('PushManager' in window)) return;
-
-  try {
-    const perm = Notification.permission === 'granted' ? 'granted' : await Notification.requestPermission();
-    if (perm !== 'granted') return;
-
-    const reg = await navigator.serviceWorker.ready;
-    let sub = await reg.pushManager.getSubscription();
-    if (!sub) {
-      sub = await reg.pushManager.subscribe({
-        userVisibleOnly: true,
-        applicationServerKey: vapidKeyToUint8(VAPID_PUBLIC_KEY)
-      });
-    }
-
-    const subJson = JSON.stringify(sub.toJSON());
-    const endpoint = sub.endpoint;
-
-    const { data: existe } = await db.from('push_subscriptions')
-      .select('id, user_id')
-      .eq('endpoint', endpoint)
-      .maybeSingle();
-
-    if (existe) {
-      await db.from('push_subscriptions')
-        .update({ user_id: S.me.id, subscription_json: subJson })
-        .eq('id', existe.id);
-    } else {
-      await db.from('push_subscriptions').insert({
-        user_id:          S.me.id,
-        endpoint:         endpoint,
-        subscription_json: subJson,
-        user_agent:       navigator.userAgent.substring(0, 200)
-      });
-    }
-  } catch(e) { console.warn('[push] Erro ao registrar:', e.message); }
-}
-
-async function enviarPushAviso(title, body) {
-  try {
-    await fetch('/api/push', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        type: 'broadcast',
-        payload: { title, body, url: '/?page=home', tag: 'aviso-' + Date.now() }
-      })
-    });
-  } catch(e) { console.warn('[push] Erro ao enviar push:', e.message); }
-}
-
-async function agendarPushEscala(escalaId, alarmTs, members) {
-  try {
-    await fetch('/api/schedule-alarm', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ escala_id: escalaId, alarm_ts: alarmTs, members })
-    });
-  } catch(e) { console.warn('[push] Erro ao agendar alarmes:', e.message); }
-}
-
-// ── POSTS ──
-
-const BADGE = { versiculo:'📖 Versículo', mensagem:'💬 Mensagem', aviso:'📢 Aviso' };
-
-function selType(btn) {
-  if (btn.dataset.t === 'aviso' && S.me?.role !== 'adm') {
-    toast('Somente o ADM pode postar avisos.', 'warn'); return;
-  }
-  document.querySelectorAll('.type-pill').forEach(p => p.classList.remove('sel'));
-  btn.classList.add('sel'); S.postType = btn.dataset.t;
-}
-
-function atualizarPills() {
-  const avisoBtn = document.querySelector('.type-pill[data-t="aviso"]');
-  if (!avisoBtn) return;
-  avisoBtn.style.display = S.me?.role === 'adm' ? '' : 'none';
-  if (S.postType === 'aviso' && S.me?.role !== 'adm') {
-    S.postType = 'mensagem';
-    document.querySelectorAll('.type-pill').forEach(p => p.classList.remove('sel'));
-    document.querySelector('.type-pill[data-t="mensagem"]')?.classList.add('sel');
-  }
-}
-
-function cardPost(p, forcarDel=false) {
-  const dono = S.me && (S.me.role==='adm' || String(S.me.id)===String(p.author_id));
-  const del  = forcarDel || dono;
-  const data = p.created_at ? new Date(p.created_at).toLocaleDateString('pt-BR') : '';
-  return `<div class="post-card">
-    <div class="post-top">
-      <div class="post-avatar">${(p.author_name||'?')[0].toUpperCase()}</div>
-      <div class="post-meta-txt">
-        <div class="post-author">${p.author_name||'Membro'}</div>
-        <div class="post-date">${data}</div>
-      </div>
-      <span class="post-badge badge-${p.type}">${BADGE[p.type]||p.type}</span>
-    </div>
-    <div class="post-body${p.type==='versiculo'?' is-versiculo':''}">${p.content}</div>
-    ${del?`<div class="post-actions">
-      <button class="btn-del-post" onclick="deletarPost('${p.id}')">🗑 Excluir</button>
-    </div>`:''}
-  </div>`;
-}
-
-async function addPost() {
-  const txt = document.getElementById('post-text').value.trim();
-  if (!txt) { toast('Escreva algo antes de publicar.','err'); return; }
-  if (!S.me) { toast('Faça login para publicar.','err'); return; }
-
-  const novo = await inserir('posts', {
-    type: S.postType, content: txt,
-    author_id: S.me.id, author_name: S.me.name
-  });
-
-  if (novo) {
-    S.posts.unshift(novo);
-    document.getElementById('post-text').value = '';
-    renderPosts(); renderAdmPosts();
-    toast('Publicado! ✨');
-    if (S.postType === 'aviso') {
-      enviarPushAviso(txt, '📢 Novo Aviso da Célula Ágape');
-    }
-  } else toast('Erro ao publicar.','err');
-}
-
-async function deletarPost(id) {
-  if (!confirm('Excluir este post?')) return;
-  if (await deletar('posts', id)) {
-    S.posts = S.posts.filter(p => String(p.id) !== String(id));
-    renderPosts(); renderAdmPosts(); toast('Post removido.');
-  } else toast('Erro ao excluir.','err');
-}
-const deletePost = deletarPost;
 
 function renderPosts() {
   const el = document.getElementById('posts-list');
-  const btnMore = document.getElementById('mural-more-btn');
-  const displayPosts = S.posts.slice(0, S_muralLimit);
-  el.innerHTML = displayPosts.length
-    ? displayPosts.map(p => cardPost(p)).join('')
-    : '<div class="empty"><span class="ico">📋</span>Nenhuma publicação ainda.</div>';
-  if (btnMore) {
-    btnMore.style.display = (S.posts.length > S_muralLimit) ? 'block' : 'none';
-  }
-}
-function renderAdmPosts() {
-  const el = document.getElementById('adm-posts-list');
-  if (!el) return;
-  el.innerHTML = S.posts.length
-    ? S.posts.map(p => cardPost(p, true)).join('')
-    : '<div class="empty"><span class="ico">📋</span>Sem posts.</div>';
-}
-
-// ── ESCALA ──
-
-function renderMemberPicker() {
-  const el = document.getElementById('member-picker');
-  if (!el) return;
-  el.innerHTML = S.users.map(u => `
-    <button class="member-pick-btn" data-uid="${u.id}" onclick="toggleMemberPick(this)">
-      <div class="member-pick-av">${u.name[0]}</div>
-      ${u.name.split(' ')[0]}
-    </button>`).join('');
-}
-function toggleMemberPick(btn) { btn.classList.toggle('sel'); }
-function getMembros() {
-  return [...document.querySelectorAll('.member-pick-btn.sel')]
-    .map(b => S.users.find(u => String(u.id) === String(b.dataset.uid)))
-    .filter(Boolean);
-}
-function toggleAlarmOptions() {
-  document.getElementById('alarm-options').style.display =
-    document.getElementById('alarm-toggle').checked ? 'block' : 'none';
-}
-
-function proxima() {
-  const hoje = new Date(); hoje.setHours(0,0,0,0);
-  return S.escala.find(e => { const d = new Date(e.date); d.setHours(0,0,0,0); return d >= hoje; });
-}
-
-function chipsMembers(members) {
-  return (members||[]).map(m => `
-    <div class="member-chip">
-      <div class="member-chip-av">${m.name[0]}</div>
-      ${m.name.split(' ')[0]}
+  const display = S.posts.slice(0, S.muralLimit);
+  el.innerHTML = display.map(p => `
+    <div class="post-card">
+      <div class="post-top">
+        <div class="post-avatar">${p.author_name[0]}</div>
+        <div class="post-meta-txt">
+          <div class="post-author">${p.author_name}</div>
+          <div class="post-date">${new Date(p.created_at).toLocaleDateString()}</div>
+        </div>
+        <span class="post-badge badge-${p.type}">${p.type}</span>
+      </div>
+      <div class="post-body">${p.content}</div>
     </div>`).join('');
-}
-
-function cardEscala(e, i, isAdm) {
-  const atual   = proxima()?.id === e.id;
-  const temAl   = !!e.alarm;
-  return `<div class="escala-card${atual?' current':''}">
-    <div class="esc-header">
-      <div class="esc-num">${i+1}</div>
-      <div class="esc-header-info">
-        <div class="esc-date">${e.dateStr}</div>
-        <div class="esc-week-label">Semana ${i+1}</div>
-      </div>
-      ${atual?'<span class="esc-badge">Esta semana</span>':''}
-    </div>
-    <div class="esc-members">${chipsMembers(e.members)}</div>
-    <div class="esc-footer">
-      <div class="alarm-indicator${temAl?' set':''}">
-        <div class="alarm-dot"></div>
-        <span>${temAl?'🔔 Notificações diárias':'Sem alarme'}</span>
-      </div>
-      ${isAdm?`<div class="esc-actions">
-        <button class="btn-sm-icon" onclick="abrirAlarme('${e.id}')">🔔</button>
-        <button class="btn-sm-icon" onclick="deletarEscala('${e.id}')">🗑</button>
-      </div>`:''}
-    </div>
-  </div>`;
-}
-
-async function addEscala() {
-  const d       = document.getElementById('esc-date').value;
-  const membros = getMembros();
-  if (!d)            { toast('Selecione a data.','err'); return; }
-  if (!membros.length){ toast('Selecione ao menos um responsável.','err'); return; }
-
-  const alarmAtivo = document.getElementById('alarm-toggle').checked;
-  let dadosAlarme  = { alarm_ts:null };
-
-  if (alarmAtivo) {
-    dadosAlarme = { alarm_ts: new Date(d).toISOString() };
+  
+  if (S.posts.length > S.muralLimit) {
+    document.getElementById('mural-more-btn').style.display = 'block';
   }
-
-  const semana = await inserir('escala_semanas', { date:d, ...dadosAlarme });
-  if (!semana) { toast('Erro ao salvar escala.','err'); return; }
-
-  await Promise.all(membros.map(m =>
-    inserir('escala_membros', { escala_id:semana.id, user_id:m.id, user_name:m.name })
-  ));
-
-  document.getElementById('esc-date').value = '';
-  document.getElementById('alarm-toggle').checked = false;
-  document.getElementById('alarm-options').style.display = 'none';
-  document.querySelectorAll('.member-pick-btn.sel').forEach(b => b.classList.remove('sel'));
-  closeSheet('escala-sheet');
-
-  await recarregarEscala();
-  if (alarmAtivo) {
-    agendarPushEscala(semana.id, dadosAlarme.alarm_ts, membros);
-  }
-  toast('Escala adicionada! 🧁');
-}
-
-async function deletarEscala(id) {
-  if (!confirm('Remover esta escala?')) return;
-  if (await deletar('escala_semanas', id)) {
-    await recarregarEscala();
-    toast('Escala removida.');
-  } else toast('Erro ao remover.','err');
-}
-const deleteEscala = deletarEscala;
-
-function abrirAlarme(id) {
-  const e = S.escala.find(x => String(x.id) === String(id));
-  if (!e) return;
-  document.getElementById('alarm-edit-id').value = id;
-  openSheet('alarm-edit-sheet');
-}
-const openAlarmEdit = abrirAlarme;
-
-async function saveAlarmEdit() {
-  const id = document.getElementById('alarm-edit-id').value;
-  const e = S.escala.find(x => String(x.id) === String(id));
-  if (!e) return;
-  const alarmTs = e.date.toISOString();
-  await atualizar('escala_semanas', id, { alarm_ts: alarmTs });
-  await recarregarEscala();
-  agendarPushEscala(id, alarmTs, e.members);
-  closeSheet('alarm-edit-sheet');
-  toast('Alarme configurado! 🔔');
-}
-
-async function removeAlarm() {
-  const id = document.getElementById('alarm-edit-id').value;
-  await atualizar('escala_semanas', id, { alarm_ts: null });
-  await recarregarEscala();
-  closeSheet('alarm-edit-sheet');
-  toast('Alarme removido.');
 }
 
 function renderEscala() {
-  const el   = document.getElementById('escala-list');
-  const adm  = S.me?.role === 'adm';
-  el.innerHTML = S.escala.length
-    ? S.escala.map((e,i) => cardEscala(e,i,adm)).join('')
-    : '<div class="empty"><span class="ico">🧁</span>Nenhuma escala cadastrada.</div>';
-}
-function renderAdmEscala() {
-  const el = document.getElementById('adm-escala-list');
-  if (!el) return;
-  el.innerHTML = S.escala.length
-    ? S.escala.map((e,i) => cardEscala(e,i,true)).join('')
-    : '<div class="empty"><span class="ico">🧁</span>Sem escala.</div>';
-}
-
-// ── USUÁRIOS ──
-
-async function addUser() {
-  const name  = document.getElementById('new-name').value.trim();
-  const login = document.getElementById('new-login').value.trim();
-  const pass  = document.getElementById('new-pass').value;
-  const role  = document.getElementById('new-role').value;
-  if (!name||!login||!pass) { toast('Preencha todos os campos.','err'); return; }
-  if (S.users.find(u => u.login === login)) { toast('Login já existe.','err'); return; }
-
-  const novo = await inserir('users', { name, login, pass_hash:pass, role });
-  if (novo) {
-    S.users.push(novo);
-    ['new-name','new-login','new-pass'].forEach(id => document.getElementById(id).value = '');
-    renderUsers();
-    toast('Usuário adicionado! 👤');
-  } else toast('Erro ao adicionar.','err');
-}
-
-async function deleteUser(id) {
-  const u = S.users.find(u => String(u.id) === String(id));
-  if (u?.login === 'admin') { toast('Não é possível remover o ADM principal.','err'); return; }
-  if (!confirm('Remover este usuário?')) return;
-  if (await deletar('users', id)) {
-    S.users = S.users.filter(u => String(u.id) !== String(id));
-    renderUsers(); toast('Usuário removido.');
-  } else toast('Erro ao remover.','err');
-}
-
-function renderUsers() {
-  document.getElementById('user-list').innerHTML = S.users.map(u => `
-    <div class="user-row">
-      <div class="user-av">${u.name[0]}</div>
-      <div class="user-info">
-        <div class="user-name">${u.name}</div>
-        <div class="user-login">${u.login}</div>
+  const el = document.getElementById('escala-list');
+  el.innerHTML = S.escala.map((e, i) => `
+    <div class="escala-card">
+      <div class="esc-header">
+        <div class="esc-num">${i+1}</div>
+        <div class="esc-header-info">
+          <div class="esc-date">${new Date(e.date + 'T12:00:00').toLocaleDateString('pt-BR')}</div>
+          <div class="esc-week-label">Semana ${i+1}</div>
+        </div>
       </div>
-      <span class="role-tag role-${u.role}">${u.role==='adm'?'⭐ ADM':'Membro'}</span>
-      ${u.login!=='admin'?`<button class="btn-sm-icon" onclick="deleteUser('${u.id}')">🗑</button>`:''}
+      <div class="esc-members">
+        ${e.members.map(m => `<div class="member-chip"><div class="member-chip-av">${m.user_name[0]}</div>${m.user_name}</div>`).join('')}
+      </div>
     </div>`).join('');
 }
 
-// ── HOME ──
+function openSheet(id) { document.getElementById(id).classList.add('open'); }
+function closeSheet(id) { document.getElementById(id).classList.remove('open'); }
+function sheetBg(e, id) { if(e.target.id === id) closeSheet(id); }
 
-function renderHome() {
-  const el = document.getElementById('prox-home');
-  const p  = proxima();
-  if (!p) { el.innerHTML = ''; return; }
-  const nomes = (p.members||[]).map(m => m.name.split(' ')[0]).join(' & ') || '—';
-  el.innerHTML = `<div class="prox-banner">
-    <div class="pb-icon">🧁</div>
-    <div style="flex: 1;">
-      <div class="pb-label">Próximo lanche</div>
-      <div class="pb-name">${nomes}</div>
-      <div class="pb-date">${p.dateStr}</div>
-    </div>
-    <button class="btn btn-accent" style="height: 32px; padding: 0 12px; font-size: 0.75rem;" onclick="goPage('escala')">Ver escala do mês</button>
-  </div>`;
+function toast(msg, type='ok') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast show ' + type;
+  setTimeout(() => t.className = 'toast', 3000);
 }
 
-// ── ADM TABS ──
-
-function admTab(id, btn) {
-  document.querySelectorAll('.adm-panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.adm-tab').forEach(b => b.classList.remove('active'));
-  document.getElementById('adm-'+id).classList.add('active');
-  btn.classList.add('active');
-  if (id === 'posts')     renderAdmPosts();
-  if (id === 'escala-a')  renderAdmEscala();
+async function addPost() {
+  const txt = document.getElementById('post-text').value;
+  if(!txt) return;
+  const { data } = await db.from('posts').insert({
+    content: txt,
+    type: S.postType,
+    author_id: S.me.id,
+    author_name: S.me.name
+  }).select().single();
+  
+  if(data) {
+    S.posts.unshift(data);
+    renderPosts();
+    document.getElementById('post-text').value = '';
+    toast('Publicado!');
+    if(S.postType === 'aviso') {
+      fetch('/api/push', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ payload: { title: txt, body: 'Novo Aviso' } })
+      });
+    }
+  }
 }
 
-const _paginaURL = new URL(location.href).searchParams.get('page');
-if (_paginaURL) setTimeout(() => goPage(_paginaURL), 200);
+function selType(btn) {
+  document.querySelectorAll('.type-pill').forEach(p => p.classList.remove('sel'));
+  btn.classList.add('sel');
+  S.postType = btn.dataset.t;
+}
 
 iniciar();
 </script>
